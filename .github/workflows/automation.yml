@@ -22,5 +22,4 @@ jobs:
 
       - name: Copy Files to S3
         run: |
-          aws s3 cp ${{ github.workspace }} s3://www.flocomindustries.com --recursive
-          
+          aws s3 cp ${{ github.workspace }} s3://www.flocomindustries.com --recursive --exclude ".git" --exclude ".github"
