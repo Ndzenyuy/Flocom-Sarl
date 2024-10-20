@@ -22,4 +22,4 @@ jobs:
 
       - name: Copy Files to S3
         run: |
-          echo "Repository root is located at: ${{ github.workspace }}"
+          aws s3 cp ${{ github.workspace }}/* s3://www.flocomindustries.com --recursive
